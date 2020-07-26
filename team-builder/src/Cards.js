@@ -4,6 +4,10 @@ import './App.css'
 
 function Cards(props) {
 
+    function editFunc(obj) {
+        props.setMemberToEdit(obj)
+    }
+
   return (
     <>
     <div className="card">
@@ -14,6 +18,7 @@ function Cards(props) {
         <li>Name: {person.name}</li>
         <li>Email: {person.email}</li>
         <li>Role: {person.role}</li>
+        <button onClick={()=>editFunc(person)}>Edit</button>
       </ul>
       )
     })
